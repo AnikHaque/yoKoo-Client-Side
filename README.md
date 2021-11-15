@@ -1,6 +1,6 @@
 # yoKoo
 
-This project was bootstrapped with [Live Site Link](https://bycycle-shop.web.app/).
+ [Live Site Link](https://bycycle-shop.web.app/).
 
 ## Features Of This Project
 
