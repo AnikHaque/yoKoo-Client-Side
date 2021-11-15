@@ -49,7 +49,7 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div className="bg-dark text-white bg-dashboard">
+        <div className="bg-info text-white bg-dashboard">
             <Toolbar />
             <Divider />
             
@@ -60,27 +60,27 @@ function Dashboard(props) {
                 } */}
 
                 { !admin ? <Box>
-                <Link to={`${url}/pay`}><Button color="" className="text-white">Pay</Button></Link>
+                <Link to={`${url}/pay`}><Button color="" className="text-white bg-dark mb-2 mx-3 px-5 pe-5">Pay</Button></Link>
                 <br></br>
-                <Link to={`${url}/myorders`}><Button className="text-white">My Orders</Button></Link>
+                <Link to={`${url}/myorders`}><Button className="text-white bg-dark mb-2 mx-3 px-3 pe-5">My Orders</Button></Link>
                 <br></br>
-                <Link to={`${url}/review`}><Button className="text-white">Review</Button></Link>
+                <Link to={`${url}/review`}><Button className="text-white bg-dark mb-2 mx-3 px-5 pe-5">Review</Button></Link>
                 <br></br>
                 <Link to="/home">
-                <Button onClick={logOut} className="text-white">LogOut</Button>
+                <Button onClick={logOut} className="text-white bg-dark mb-2 mx-3 px-5 pe-5">LogOut</Button>
                 </Link>
                 </Box>
                 :
                 <Box>
-                        <Link to={`${url}/addproduct`}><Button className="text-white">Add a Product</Button></Link>
+                        <Link to={`${url}/addproduct`}><Button className="text-white mx-3 mb-2 bg-dark">Add a Product</Button></Link>
                 <br></br>
-                <Link to={`${url}/makeadmin`}><Button className="text-white">Make Admin</Button></Link>
+                <Link to={`${url}/makeadmin`}><Button className="text-white mx-3 mb-2 bg-dark">Make Admin</Button></Link>
                 <br></br>
-                <Link to={`${url}/manageproduct`}><Button className="text-white">Manage Product</Button></Link>
-                <Link to={`${url}/manageorder`}><Button className="text-white">Manage order</Button></Link>
+                <Link to={`${url}/manageproduct`}><Button className="text-white mb-2 mx-3 bg-dark">Manage Product</Button></Link>
+                <Link to={`${url}/manageorder`}><Button className="text-white mx-3 mb-2 bg-dark">Manage order</Button></Link>
                 <br></br>
                 <Link to="/home">
-                <Button onClick={logOut} className="text-white">LogOut</Button>
+                <Button onClick={logOut} className="text-white mx-3 px-3 pe-3 bg-dark">LogOut</Button>
                 </Link>
                 
                         </Box>

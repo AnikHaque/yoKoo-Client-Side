@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import login from '../../../images/login.jpg'
 import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './Login.css';
 
 const loginImage = {
     width:'580px'
@@ -37,10 +38,10 @@ const handleOnChange = e => {
  <Grid container spacing={2}>
         <Grid item sx={{mt:8}} xs={12} md={6}>
           <Typography variant="body1" gutterBottom>
-Login
+<h1 className="text-center fw-bold">Please Login</h1>
           </Typography>
 
-<form onSubmit={handleLoginSubmit} className="bg-primary text-white p-5">
+<form onSubmit={handleLoginSubmit} className="bg-primary text-white p-5 login">
 <TextField 
 sx={{width:'75%', m:1}}
 name="email"
@@ -68,7 +69,7 @@ name="password"
 </form>
 <p>.................................</p>
     
-<Button onClick={handleGoogleSignIn} className="bg-info text-white px-5 pe-5">Sign In With Google</Button>
+<Button onClick={handleGoogleSignIn} className="bg-info text-white px-5 pe-5 pt-3 pb-3">Sign In With Google</Button>
 {
     isLoading && <CircularProgress color="inherit" />
 

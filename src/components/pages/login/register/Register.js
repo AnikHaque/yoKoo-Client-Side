@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import login from '../../../../images/login.jpg';
 import { Link, useHistory,useLocation } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
+import './Register.css'
 
 const loginImage = {
     width:'580px'
@@ -41,7 +42,7 @@ const handleOnChange = e => {
  <Grid container spacing={2}>
         <Grid item sx={{mt:8}} xs={12} md={6}>
           <Typography variant="body1" gutterBottom>
-Please Register
+<h1 className="fw-bold text-center">Please Register</h1>
           </Typography>
 
 { !isLoading && <form className="bg-primary text-white p-5 mb-5" onSubmit={handleLoginSubmit}>
