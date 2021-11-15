@@ -1,0 +1,23 @@
+.form input {
+    width:70%;
+    margin-left: 70px;
+}
+.form textarea {
+    width:70%;
+    margin-left: 70px;
+}
+.form{
+    margin-left: 250px;
+    margin-top: 50px;
+    background-color: powderblue;
+    padding: 25px;
+    margin-right: 90px;
+    
+}
+.product-detail{
+    background-image: url("https://media.istockphoto.com/vectors/creative-free-shipping-marketing-for-commerce-and-advertisingbanner-vector-id1310297498?k=20&m=1310297498&s=612x612&w=0&h=bt2n6JpY4MJCIaNEZbmF14pg-9YAC2_RsvDI2uJwu-0=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
