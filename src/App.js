@@ -16,6 +16,11 @@ import AuthProvider from './context/authprovider/AuthProvider';
 import PrivateRoute from './components/pages/login/privateRoute/PrivateRoute';
 import Dashboard from './components/pages/Dashboard/Dashboard/Dashboard';
 import DashboardHome from './components/pages/Dashboard/DashboardHome/DashboardHome';
+import Team from './components/pages/team/Team';
+import Gallary from './components/pages/gallary/Gallary';
+
+
+
 
 function App() {
   return (
@@ -30,9 +35,17 @@ function App() {
         <Route exact path="/home">
          <Home></Home>
         </Route>
+        <Route exact path="/team">
+        <Team></Team>
+        </Route>
+        <Route exact path="/gallary">
+        <Gallary></Gallary>
+        </Route>
+        
         <Route exact path="/about">
          <About></About>
         </Route>
+        
         <Route exact path="/explore">
          <Explore></Explore>
         </Route>

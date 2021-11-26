@@ -20,7 +20,7 @@ const ProductDetail = () => {
     const {id} = useParams();
     const [product,setProduct] = useState({})
     useEffect(()=>{
-        fetch(`https://fast-reaches-25590.herokuapp.com/products/${id}`)
+        fetch(`http://localhost:5000/products/${id}`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
 
@@ -29,7 +29,7 @@ const ProductDetail = () => {
     const onSubmit = data =>{
         data.status="pending";
         console.log(data);
-        axios.post("https://fast-reaches-25590.herokuapp.com/orders",data)
+        axios.post("http://localhost:5000/orders",data)
         .then(res=>{
             if(res.data.insertedId){
                 alert("Added Successfully");

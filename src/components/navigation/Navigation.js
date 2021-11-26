@@ -63,6 +63,12 @@ export default function Navigation() {
           <Link className={navItem} to="/explore">
           <Button color="inherit">Explore</Button>
           </Link>
+          <Link className={navItem} to="/team">
+          <Button color="inherit">Our Team</Button>
+          </Link>
+          <Link className={navItem} to="/gallary">
+          <Button color="inherit">Our Gallary</Button>
+          </Link>
 
           {
             user?.email &&

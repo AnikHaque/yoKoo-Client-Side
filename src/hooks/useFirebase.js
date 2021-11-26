@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import initializeFirebase from "../components/pages/login/firebase/firebase.init";
+ import initializeFirebase from "../components/pages/login/firebase/firebase.init";
 
 import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged,signInWithEmailAndPassword,signInWithPopup,GoogleAuthProvider,updateProfile} from "firebase/auth";
 
 
 initializeFirebase();
+
 const useFirebase = () => {
 const [user,setUser] =useState({})
 const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +23,7 @@ const registerUser = (email,password,name,history) => {
     setAuthError('');
     const newUser = {email, displayName:name}
     setUser(newUser);
-saveUser(email,name,'POST');
+    saveUser(email,name,'POST');
 
     updateProfile(auth.currentUser, {
       displayName:name
@@ -94,7 +95,7 @@ useEffect(()=>{
 },[])
 
 useEffect(()=>{
-fetch(`https://fast-reaches-25590.herokuapp.com/users/${user.email}`)
+fetch(`http://localhost:5000/users/${user.email}`)
 .then(res=>res.json())
 .then(data=>setAdmin(data.admin))
 },[user.email])
@@ -111,7 +112,7 @@ const logOut = () => {
 
 const saveUser = (email, displayName,method) => {
 const user = {email,displayName};
-fetch('https://fast-reaches-25590.herokuapp.com/users', {
+fetch('http://localhost:5000/users', {
 method:method,
 headers: {
   'content-type':'application/json'

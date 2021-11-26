@@ -14,13 +14,13 @@ setStatus(e.target.value);
     console.log(status);
 
     useEffect(() => {
-        fetch('https://fast-reaches-25590.herokuapp.com/orders')
+        fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
 
     const handleUpdate =(id) => {
-        fetch(`https://fast-reaches-25590.herokuapp.com/updateStatus/${id}`,{
+        fetch(`http://localhost:5000/updateStatus/${id}`,{
             method:"PUT",
             headers:{"content-type":"application/json"},
 body:JSON.stringify({status}),
@@ -33,7 +33,7 @@ body:JSON.stringify({status}),
     return (
         <div id="services">
             <h1 className="fw-bold mt-2 text-center mb-5">Manage All Orders</h1>
-              <div className="service-container">
+              <div className="service-container bg-dark pt-4 pb-4">
                 <div className="container">
             <div class="row row-cols-1 row-cols-md-4 g-4">
             {orders.map((pd, index) => (

@@ -1,0 +1,7 @@
+.bg-gallary{
+    background-image: url("https://pbs.twimg.com/media/Ds8-P4JWsAYqG7u.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-position: center;
+}

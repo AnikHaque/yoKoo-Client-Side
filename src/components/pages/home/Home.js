@@ -6,13 +6,13 @@ import CycleRepair from '../cycleRepair/CycleRepair';
 import Footer from '../footer/Footer';
 import HomeService from '../homeService/HomeService';
 
+
 const Home = () => {
     return (
         <div>
            <Banner></Banner>
            <HomeService></HomeService>
            <CycleRepair></CycleRepair>
-           
            <ManageReview></ManageReview>
            <Footer></Footer>
         </div>
