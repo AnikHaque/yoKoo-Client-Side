@@ -1,4 +1,4 @@
-# yoKoo
+# yoKoo-Client
 
  [Live Site Link](https://bycycle-shop.web.app/).
 
